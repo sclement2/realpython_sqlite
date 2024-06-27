@@ -6,8 +6,15 @@ image: axonasif/workspace-python@sha256:f5ba627a31505ea6cf100abe8e552d7ff9e0abd6
 tasks:
   - name: Init project
     init: |
+      python3 -m venv .venv
+      . .venv/bin/activate
       # upgrade some dependencies
       pip install --upgrade pip wheel setuptools
+      echo "gitpod workspace initiated"
+  - name: Command
+    command: |
+      . .venv/bin/activate
+      echo "Welcome to your gitpod workspace with venv!"
 
 vscode:
   extensions:
