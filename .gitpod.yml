@@ -8,6 +8,7 @@ tasks:
       . .venv/bin/activate
       # upgrade some dependencies
       pip install --upgrade pip wheel setuptools
+      pip install -r requirements.txt
       echo "gitpod workspace initiated"
   - name: Command
     command: |
